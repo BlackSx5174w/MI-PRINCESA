@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Princesa 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="createStar(event)">
+
+    <!-- MÚSICA -->
+    <audio id="music" src="music.mp3" loop></audio>
+
+    <!-- EFECTOS -->
+    <div class="particles"></div>
+    <div class="hearts"></div>
+
+    <!-- PÁGINA 1 -->
+    <div class="page portada active" id="page1">
+        <div class="overlay">
+            <h1>Un pequeño detalle para mi princesa 👑💜</h1>
+            <h2>Feliz San Valentín</h2>
+            <button onclick="openLetter()">Abrir carta 💌</button>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2 -->
+    <div class="page" id="page2">
+        <div class="envelope">
+            <div class="letter">
+                <p>
+                    Este es un pequeño regalo, un pequeño detalle para mi princesa 👑💖.<br><br>
+
+                    Gracias a ti siento que mi vida ya no es tan mala como antes. Desde que empecé a hablar contigo,
+                    desde aquella noche, mi vida ya no volvió a ser la misma ✨.<br><br>
+
+                    Gracias a ti hoy en día soy muy feliz, la verdad. Gracias a ti he vuelto a sonreír jeje 😄.<br><br>
+
+                    No sé qué haría sin ti… Te agradezco con todo mi corazón por haber sanado las heridas que llevaba
+                    dentro ❤️.<br><br>
+
+                    Llegaste tú y cambiaste mi vida, me diste fuerzas para continuar.<br><br>
+
+                    Gracias por ser parte de mi vida. Te amo 💖
+                </p>
+                <button onclick="goFinal()">Un último detalle 🌸</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 3 -->
+    <div class="page" id="page3">
+        <div class="final">
+            <h1 class="name">Mi Princesa 💜</h1>
+
+            <div class="flower">
+                <div class="petal p1"></div>
+                <div class="petal p2"></div>
+                <div class="petal p3"></div>
+                <div class="petal p4"></div>
+                <div class="petal p5"></div>
+                <div class="petal p6"></div>
+                <div class="center"></div>
+                <div class="stem"></div>
+            </div>
+
+            <button onclick="surprise()">🎁 Sorpresa</button>
+
+            <div class="surprise" id="surprise">
+                <h2>💜Siempre te voy a amar Dayi💜</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

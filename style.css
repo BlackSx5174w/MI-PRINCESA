@@ -1,0 +1,170 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: radial-gradient(circle, #2a003f, #0b0014);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1e6ff;
+    overflow: hidden;
+}
+
+/* EFECTOS */
+.particles, .hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hearts::before {
+    content: "💜 💖 💗 💖 💜";
+    position: absolute;
+    inset: 0;
+    font-size: 2rem;
+    animation: hearts 15s linear infinite;
+}
+
+@keyframes hearts {
+    from { transform: translateY(100%); }
+    to { transform: translateY(-200%); }
+}
+
+/* ESTRELLAS */
+.star {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #fff;
+    animation: starFade 1s ease forwards;
+}
+
+@keyframes starFade {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* PÁGINAS */
+.page {
+    display: none;
+    width: 90%;
+    max-width: 720px;
+    padding: 30px;
+    background: linear-gradient(145deg, #2f0147, #16001f);
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(180,100,255,0.4);
+    animation: fadeIn 1s ease;
+    z-index: 2;
+}
+
+.page.active { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* PORTADA */
+.overlay {
+    text-align: center;
+    padding: 70px 25px;
+}
+
+/* BOTONES */
+button {
+    margin-top: 30px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    background: linear-gradient(to right, #7f3cff, #b983ff);
+    cursor: pointer;
+}
+
+/* CARTA */
+.envelope {
+    animation: openEnvelope 1.5s ease forwards;
+}
+
+@keyframes openEnvelope {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+.letter {
+    background: #2a003f;
+    padding: 25px;
+    border-radius: 15px;
+    line-height: 1.7;
+}
+
+/* NOMBRE DAYANA */
+.name {
+    font-size: 3em;
+    color: #e0c3ff;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #b983ff; }
+    to { text-shadow: 0 0 30px #f1d0ff; }
+}
+
+/* FLOR */
+.flower {
+    position: relative;
+    width: 180px;
+    height: 240px;
+    margin: 30px auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+.petal {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    background: radial-gradient(circle, #f1d0ff, #9d4edd);
+    border-radius: 50%;
+    top: 20px;
+    left: 50px;
+    transform-origin: bottom center;
+}
+
+.p1 { transform: rotate(0deg); }
+.p2 { transform: rotate(60deg); }
+.p3 { transform: rotate(120deg); }
+.p4 { transform: rotate(180deg); }
+.p5 { transform: rotate(240deg); }
+.p6 { transform: rotate(300deg); }
+
+.center {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #fff, #c77dff);
+    border-radius: 50%;
+}
+
+.stem {
+    position: absolute;
+    top: 150px;
+    left: 88px;
+    width: 6px;
+    height: 90px;
+    background: linear-gradient(to bottom, #5a189a, #240046);
+}
+
+/* SORPRESA */
+.surprise {
+    display: none;
+    margin-top: 30px;
+    animation: fadeIn 1s ease;
+}
